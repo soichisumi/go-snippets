@@ -4,6 +4,7 @@ import (
 	"testing"
 	"github.com/yoyoyousei/SandBox/ext"
 	"github.com/yoyoyousei/SandBox/testutil"
+	"fmt"
 )
 
 func TestGettingExtValue(t *testing.T) {
@@ -58,4 +59,16 @@ func TestArrayAndSlice(t *testing.T) {
 	if s[0] != 6{
 		t.Errorf("er")
 	}
+}
+
+func TestPanic(t *testing.T){
+	defer func(){
+		if r:=recover(); r==nil{
+			t.Errorf("The code did not panic")
+		}
+	}()
+
+	var a=[]bool{true, false, false, true}
+	fmt.Println(a)
+	fmt.Println(a[4]) //panic occur
 }
