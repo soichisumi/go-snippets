@@ -72,3 +72,25 @@ func TestPanic(t *testing.T){
 	fmt.Println(a)
 	fmt.Println(a[4]) //panic occur
 }
+
+func TestSliceLength(t *testing.T){
+	defer func(){
+		if r:=recover(); r==nil{
+			t.Errorf("The code did not panic")
+		}
+	}()
+
+	var a=[4]bool{true, false, false, true} //配列
+	s:=a[0:2]
+	printSlice(s)
+	s=s[:]
+	printSlice(s)
+	s=s[:0]
+	printSlice(s)
+	x:=s[1] //panic
+	fmt.Println(x)
+}
+
+func printSlice(s []bool){
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s) //sliceには容量capもある
+}
