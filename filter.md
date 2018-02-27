@@ -7,7 +7,7 @@
 
 
 
-```puml
+```uml
 @startuml
 start
 :SessionFilter;
@@ -76,7 +76,7 @@ spring Securityによって作られる`springSecurityFilterChain`というbean�
 - `@EnableWebSecurity`を設定
 - `WebSecurityConfigurer`を継承した設定クラスをbean化する
 
-```puml
+```uml
 @startuml
 hide field
 hide method
