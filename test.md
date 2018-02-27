@@ -1,4 +1,3 @@
-```uml
 @startuml
 
 actor USER
@@ -46,4 +45,3 @@ end
 
 UA <-- BO: TOPにリダイレクト
 @enduml
-```
