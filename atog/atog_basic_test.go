@@ -2,8 +2,8 @@ package atog
 
 import (
 	"testing"
-	"github.com/yoyoyousei/SandBox/ext"
-	"github.com/yoyoyousei/SandBox/testutil"
+	"github.com/yoyoyousei/GoSandBox/ext"
+	"github.com/yoyoyousei/GoSandBox/testutil"
 	"fmt"
 )
 
