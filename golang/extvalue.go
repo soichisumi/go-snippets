@@ -1,4 +1,4 @@
-package ext
+package golang
 
 var Pi float64 = float64(3.141592)
 

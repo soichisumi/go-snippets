@@ -1,4 +1,4 @@
-package communication
+package library
 
 import (
 	"github.com/GincoInc/jsonrpc"

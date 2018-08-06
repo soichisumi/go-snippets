@@ -1,4 +1,4 @@
-package concurrency
+package golang
 
 import (
 	"fmt"

@@ -1,4 +1,4 @@
-package atog
+package golang
 
 import (
 	"testing"
