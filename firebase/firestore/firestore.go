@@ -1,0 +1,5 @@
+package firestore
+
+func addDoc(){
+
+}
