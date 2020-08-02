@@ -1,5 +1,0 @@
-package firestore
-
-func addDoc(){
-
-}

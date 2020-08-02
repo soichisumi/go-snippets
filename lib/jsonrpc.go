@@ -1,4 +1,4 @@
-package library
+package lib
 
 import (
 	"github.com/GincoInc/jsonrpc"
