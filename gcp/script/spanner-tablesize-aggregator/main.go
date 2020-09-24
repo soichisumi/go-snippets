@@ -62,8 +62,11 @@ func main() {
 
 	var total int64
 	for _, k := range keys {
-		fmt.Printf("%s: %s Byte\n", k, bytefmt.ByteSize(uint64(sizeMap[k])))
 		total += sizeMap[k]
+	}
+
+	for _, k := range keys {
+		fmt.Printf("|%s|%s Byte|%f%%|\n", k, bytefmt.ByteSize(uint64(sizeMap[k])), float64(sizeMap[k])/float64(total) * 100)
 	}
 	logger.Info("done", zap.String("totalSize", bytefmt.ByteSize(uint64(total))))
 }
