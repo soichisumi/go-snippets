@@ -4,6 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/google/go-cmp/cmp"
+	"github.com/jmoiron/sqlx"
+	"github.com/soichisumi/go-util/logger"
+	"go.uber.org/zap"
 	"io"
 	"strings"
 	"testing"
@@ -40,3 +43,20 @@ func Test_json(t *testing.T) {
 		})
 	}
 }
+
+func Test_SQLx(t *testing.T) {
+	tests := []struct {
+		name string
+	}{
+		{ name: "suc"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+
+			query, arg, err := sqlx.In("test IN (?)  a", []string{"s", "b", "c"})
+			logger.Error("", zap.Error(err))
+			logger.Info("", zap.Any("q", query), zap.Any("arg", arg))
+		})
+	}
+}
+
